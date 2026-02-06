@@ -1,0 +1,168 @@
+/* =====================
+   GOOGLE FONT
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   BODY
+===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* dark gradient modern */
+  min-height: 100vh;
+  padding: 50px 15px;
+  color: #f0f0f0;
+}
+
+/* =====================
+   CV CARD
+===================== */
+.cv {
+  max-width: 780px;
+  margin: auto;
+  background: rgba(20, 20, 20, 0.95); /* slightly transparent black card */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: fadeInUp 1s ease;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #f39c12; /* gold accent */
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.contact {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+/* =====================
+   SECTION
+===================== */
+section {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05); /* subtle hover */
+}
+
+section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f39c12; /* gold accent */
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Accent vertical bar */
+section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #f39c12, #e67e22); /* gold gradient accent */
+  border-radius: 5px;
+}
+
+/* =====================
+   TEXT & LIST
+===================== */
+section p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+ul {
+  list-style: none;
+  padding-left: 22px;
+  margin-top: 6px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f39c12; /* gold bullet */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .cv {
+    padding: 30px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.05rem;
+  }
+}
